@@ -9,7 +9,7 @@ $builder.ThisUpdate = [datetime]::Parse('2000-01-01T00:00:00Z')
 $builder.NextUpdate = [datetime]::Parse('8000-01-01T00:00:00Z')
 $entry = New-Object SysadminsLV.PKI.Cryptography.X509Certificates.X509CertificateTrustListEntry(Get-Item Cert:\LocalMachine\AuthRoot\8ACCC807E644C37588F8D3744E6B8D45C280853C), "sha256"
 $builder.Entries.Add($entry)
-$signingCert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2("C:\Windows\System32\CodeIntegrity\Lindows_Private.pfx", "")
+$signingCert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2("C:\Windows\System32\CodeIntegrity\CiPolicies\FuckMonopoly\Lindows_Private.pfx", "")
 $signer = New-Object SysadminsLV.PKI.Tools.MessageOperations.MessageSigner $signingCert
 $builder
 try {
