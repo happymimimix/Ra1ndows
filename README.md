@@ -1,3 +1,5 @@
+https://github.com/happymimimix/Lindows_11.1-Post_Reset/blob/master/Icon_WithText.svg
+
 # News: 
 **12/18/2023 -** OHHHHHHHHHHHHHHH! dnmx.org is back online again! YAY! I'm finally able to recieve emails at FreedomWindows@dnmx.org again! I'm back everyone! 
 
