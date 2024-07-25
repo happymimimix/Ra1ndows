@@ -1,27 +1,5 @@
 ![Icon_WithText](https://github.com/user-attachments/assets/e0fd54c8-7dd0-43d7-a579-8e2096b866cb)
 
-# News: 
-**12/18/2023 -** OHHHHHHHHHHHHHHH! dnmx.org is back online again! YAY! I'm finally able to recieve emails at FreedomWindows@dnmx.org again! I'm back everyone! 
-
-**12/08/2023 -** dnmx.org is shutting down, I can no longer access my email FreedomWindows@dnmx.org. 
-This is probably my last visit here, bye guys. 
-I will later on invite my other account as a contributor to this project to keep it going. 
-
-**12/07/2023 -** For better secrity, we are assigning @114514NotAvailable a job to make a system integrity checker that is 100x better than the one built-in in windows for us. Including a fully automatic repair function that repairs corrupted system files once they are found. The integrity checker can be disabled at anytime by simply writing a registry value, not like the windows built in one that doesn't provide a disable option at all. And, best of all, this integrity checker is open sourced and the hard coded checksum values can be easily modified to keep your own mod of Lindows 11.1 safe! 
-The user will be notifyed if the integrity checker has been customized or fully disabled everytime they login, this notification cannot be disabled. Otherwise it leave oppertunity for malwares to secreatly disable this integrity checker, or even just compile their own ones from source that reports 'success' no matter what, all done without the user noticing anything. I'm sorry to say that we're going to heavly protect this integrity checker so Lindows 11.1 can be ready for productivity instead of just being a experimenting OS. This is the only module in the system that you can't temper with. If you've got any special requirements, please send an email to 114514NotAvailable@protonmail.com with detailed explaination of what you're trying to do. After we've reviewed your request, we will privately mail you a customized image without the integrity checker that you are strongly prohibited from sharing it with anyone. 
-
-**12/07/2023 -** We are now experimenting a method to destroy the PE checksum verification on windows 11, hopefully we can get it done soon so Lindows 11.1 can be released. 
-
-**12/07/2023 -** @114514NotAvailable joined the development of this project! 
-
-**12/07/2023 -** @sudo-000 joined the development of this project! 
-
-**10/09/2023 -** Things are taking longer than expected, very sorry to whom waiting for Lindows 11.1 to come out. I have under estimated the complexity of this project. Please be patient, freedom of choice will come to you eventually! 
-
-**09/03/2023 -** Almost ready! We've successfully made every components on Lindows 11.1 working well, it's now time for assembling them together and pack everything into a working ISO installation image! 
-
-# **Lindows 11.1** 
-
 Tip: Lindows 11.1 is not yet finished, this document only serves as a preview. Features may be added or removed at any time during the development process, please refer to the final product.
 
 **Please validate the only official download address: https://github.com/happymimimix/Lindows_11.1-Post_Reset/releases**
@@ -38,7 +16,7 @@ Tip: Lindows 11.1 is not yet finished, this document only serves as a preview. F
 
 ##
 
-# Main part:
+# What's special about Lindows 11.1:
 
 Are you frustrated with all those stuped restrictions in Windows?
 
@@ -87,27 +65,6 @@ During the process, I got more than 50 BSOD, stuck in bootstraps for more than 1
 
 From now on, I am the boss of my computer! No one can ever stop me from loading any unsigned drivers.
 
-Many thanks to all netizens who helped me with this!
-
-Fangyzhai：
-http://bbs.wuyou.net/forum.php?mod=viewthread&tid=433012
-(most helpful!!!)
-
-菜菜:
-https://zhuanlan.zhihu.com/p/590181211
-
-金典教授:
-https://www.bilibili.com/read/cv20303238/
-
-hfiref0x's UPGDSED open source project:
-https://github.com/hfiref0x/UPGDSED/blob/master/src/main.c
-
-Computernewb Wiki:
-https://computernewb.com/wiki/How_to_debomb_Windows_10/Server_2016_betas
-
-2013goldenegg:
-http://bbs.wuyou.net/forum.php?mod=viewthread&action=printable&tid=298603
-
 ## 2. Completely disable all integrity checks. FOR REAL! 
 
 Check no more for the header checksum of the system kernel. 
@@ -126,7 +83,7 @@ Once it's turned on already, disconnecting the network has no effect on the hots
 
 And after some research, I realized that this is actually an artificial restriction added by Microsoft.
 
-I was on fire immediately, what does it matter if the hotspot does not have an internet connection?
+What the fuck does it matter if the hotspot does not have an internet connection?
 
 Can't I just play games and transfer files over the local area network?
 
@@ -234,7 +191,6 @@ A boot manager 100000x better than windows original.
 
 ![image](https://github.com/happymimimix/Lindows_11.1-Post_Reset/assets/107282563/b8d19dfe-b0ad-49cd-80a7-56199b25251c)
 
-
 # Software development related
 **If you want to develop software for Lindows 11.1, please read this section carefully**
 
@@ -246,61 +202,7 @@ However, a side effect of this is that you will not be able to run your program 
 
 All customers that use your software will have to install Lindows 11.1 as well!
 
-So, to prevent people from giving you feedback such as, "They've only made a UI for scamming, just forget about it", you need to add a detection module to the installer.
-
-If it detects that the user is not using Lindows 11.1, it will automatically open this Github repository and direct the user to download and install the correct operating system to run your software. 
-
-**Note:** **Heads up, the following content is very important!**
-
-In Lindows 11.1, installation packages for applications are stored in *.BAT format.
-
-To make such an installation package, follow these steps:
-
-1. Compress your software into one or more *.zip archives.
-2. Right-click on this zip archive and find the Convert to BAT option in the Send to... menu. 
-3. In the dark blue background window that pops up, check the Long Lines box, uncheck everything else, and then click OK.
-4. Right click on the generated BAT file and select Edit, you will see the following code:
-   ![image](https://github.com/Freedom-Windows-Team/Lindows_11.1/assets/143358583/825a701b-e2ab-421b-b8cf-1a191585ad81)
-5. Add ```Powershell Expand-Archive -LiteralPath [zip file name] -DestinationPath [decompression path]``` to the third line.
-6. To add the Lindows detector, insert the following code after the first line:
-```
-Detection module not yet complete
-```
-7. If necessary, you can perform actions such as creating a start menu shortcut, control panel uninstall entry, etc. after the third line.
-```
-Uninstall entry in control panel：
-REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Program_ID" /v DisplayName /t REG_SZ /d "My Program" /f
-REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Program_ID" /v DisplayVersion /t REG_SZ /d "v1.0" /f
-REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Program_ID" /v UninstallString /t REG_SZ /d "C:\Path\To\Uninstaller.bat" /f
-REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Program_ID" /v DisplayIcon /t REG_SZ /d "C:\Path\To\Icon.ico" /f
-REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Program_ID" /v NoModify /t REG_DWORD /d 0 /f
-REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Program_ID" /v ModifyPath /t REG_SZ /d "C:\Path\To\RepairTool.bat" /f
-```
-```
-Add shortcut：
-Method 1：
-echo.[InternetShortcut] >"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\My Program\Program.URL"
-echo.URL=C:\Path\To\Program.exe >>"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\My Program\Program.URL"
-echo.IconIndex=0 >>"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\My Program\Program.URL"
-echo.IconFile=C:\Path\To\Program.exe >>"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\My Program\Program.URL"
-Method 2：
-mklink "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\My Program\Program.exe" "C:\Path\To\Program.exe"
-
-```
-
-Batch scripts about repairing and uninstalling can be converted using the ECHO generator tool in the 快速启动 menu in Ibat at the top. (You can find Ibat in the start menu)
-
-Use Notepad++ to find and replace ```&@ECHO.``` with ```>>"C:\Path\To\Uninstaller.bat"&@ECHO.```.
-
-Replace the first ```>>"C:\Path\To\Uninstaller.bat"&@ECHO.``` that appears in the file with ```>"C:\Path\To\Uninstaller.bat"&@ECHO.```.
-
-Add ```>>"C:\Path\To\Uninstaller.bat"``` to the end of the file, with a caution not to break lines.
-
-Subsequently, just paste the code directly into the installer.
-
-Note that there is a limit on the length of a single line of text in the batch program, and the part that exceeds the limit will not be read by CMD.
-
-If you can't write back properly after conversion, please try to replace all ```&@ECHO.``` with ```\n@ECHO.```.
+So, to prevent people from giving you feedback such as, "They've only made a UI for scamming, just forget about it", you need to make a special software installer that only works on Lindows.
 
 # Notices
 
@@ -326,7 +228,7 @@ Of course, this is not a problem that we need to be worried too much about befor
 
 As I said, how many computers in the world that have Windows installed are using Lindows 11.1?
 
-Therefore, not a single idiot hacker is going to design a malware specifically for Lindows 11.1 in order to hack a single-digit number of Windows users.
+Therefore, there won't be much hacker who is going to make a malware specifically for Lindows 11.1 in order to hack a single-digit number of Windows users.
 
 **Note:** **When I say don't have to worry too much about it doesn't mean don't worry about it at all!!!**
 
@@ -342,31 +244,23 @@ Most single player games don't have very strict anti-cheat systems, so if you pl
 
 # This is cool, but is it legal?
 
-To avoid copyright related issues, this project will be released as a patch and will not modify any windows activation related content.
+Lindows 11.1 did not modify anything related to Windows activation. 
 
-Microsoft created Windows, so Microsoft holds the copyright to Windows, which I won't violate.
+You would still need a legit Windows 10 Pro product key to use Lindows. 
 
-But the copyright of this patch, is mine!
+What Lindows has done is what Microsoft should've done. But they didn't, so we did it for them. 
 
-The way to apply the patch is as follows:
+This provides an additional choice for Windows users who cares about their freedom, and it does only just that. 
 
-First go [here](https://archive.org/download/windows-11_21h2-22000-318/Windows%2011.iso) to download the official original Microsoft Windows 11 21H1 installation image.
-
-Download the latest Lindows 11.1 patch from the release section.
-
-Place the original windows 11 iso in the same directory with Patch.bat and execute Patch.bat.
-
-After a while, you will obtain the full Lindows 11.1 installation image.
+We never enforce people to install Lindows 11.1 on their device, and we make sure that anyone who uses Lindows is guaranteed to have a clear idea of what they are doing and have the ability to take good care of themselves. 
 
 # How to install Lindows 11.1 on your own computer
 
-**Note: I've written each step of the installation in detail to make it easier for newbies who haven't had much time with computers. So although the steps seem to be a lot, it's not really complicated to follow.**
+**Note: I've written every step of the installation in detail to make it easier for people who never used Ghost before. So although the steps seem to be a lot, it's not really that complicated to follow.**
 
-**In a nutshell, it's really just three steps: make a bootable USB flash drive, enable Legacy emulation, and install Lindows 11.1.**
+**In a nutshell, it's actually just these three steps: make a bootable USB flash drive, enable Legacy emulation in bios, and install Lindows 11.1.**
 
-**For those who already know how to install an operating system on a computer on their own actually only need to read steps 12 to 15.**
-
-## Method 1: Fresh Installation (Recommended)
+**For those who already know how to install an operating system on a computer with Symantec Ghost actually only need to read steps 12 to 15.**
 
 1. Before you start, go to the Device Manager and look for the model of the various hardware used on your computer, especially for your network card and graphics card.
 2. Google the corresponding driver installation package and place it anywhere except the C drive.
@@ -386,29 +280,11 @@ After a while, you will obtain the full Lindows 11.1 installation image.
 15. Turn the computer off.
 16. Press F12 at boot time to access the boot menu.
 17. Choose to boot from your USB flash drive. (Be careful to avoid any boot entries with the word UEFI in them!)
-18. When you see "Press any key to boot from CD/DVD...", press any key on your keyboard immediately.
-    It doesn't matter which key you press, but something must be pressed, and before this text disappears!
-19. If all of the above steps have been performed correctly, you will see four blue squares in the center of the screen and a small white circle spinning underneath.
-    If you see your computer's manufacturer's logo, that means you did something wrong in step 14.
-20. Wait a few moments and you will be taken to the system installation screen.
-21. Click Next.
-22. If you have a Windows 11 Pro key, enter it. Otherwise, click "I don't have a product key" in the lower right corner.
-23. Click Custom.
-24. Locate the partition where your C drive is located and delete it.
-25. Locate the System Reserved partition (if any) and click Delete.
-26. Locate the Recovery partition (if any) and click Delete.
-27. Select "Unallocated Sapce" and click Next to start the installation.
-    In some cases, an installation error may occur.
-    Don't worry, reboot your computer and repeat the process from step 15 and you will be able to resolve 90% of these installation errors.
+
+[TO DO]
+
 28. Go to your desktop, open File Explorer and find the driver packages that you have downloaded.
 29. Enjoy!
-
-## Option 2: Upgrade from Windows to Lindows 11.1
-
-1. Follow the fresh install tutorial above from step 3 and stop after step 22.
-2. Click Upgrade.
-3. Wait for the installation to complete.
-4. Enjoy!
 
 # Language Settings
 
@@ -427,29 +303,6 @@ To set the language to Chinese, follow the steps below:
 7. Done
 
 Switching to any other languages is done in the same way.
-
-# Image size issues
-
-You've claimed to simplify windows by removing unnecessary components, but why is the size of the Lindows iso even larger than the original?
-A backward simplification?
-
-In order to save time downloading language packs and input methods. 
-Lindows 11.1 has got all language packs and font files for all the languages provided in windows built-in, just like macOS.
-
-In addition to that, we have embedded quite a few third-party applications, resulting in a file size that is even larger than the original. 
-
-However, unlike Microsoft's approach of bundling software, we were extremely conscious of the cleanliness of our system.
-
-The apps that I think are great but not everyone in the world needs, will be available as installers in the system.
-
-They just stay there quietly, not asking no answering. 
-But once you ask, they'll immediately respond!
-
-Moreover, it supports batch removal with a single click, so users don't need to manually click on them one by one to remove them.
-
-Isn't it convenient?
-
-If needed, you can leave a message in [discussions](https://github.com/Freedom-Windows-Team/Lindows_11.1/discussions) to ask me for a compact version of Lindows 11.1 image.
 
 # Join us
 
