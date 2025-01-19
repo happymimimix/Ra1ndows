@@ -1,0 +1,93 @@
+;
+; VM_Checker.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Lindows_VM_Checker ; TODO: edit Class
+ClassGuid={4D36E96F-E329-11CE-BFC1-08002BE10318} ; TODO: edit ClassGuid
+Provider=%ManufacturerName%
+CatalogFile=VM_Checker.cat
+DriverVer = 01/19/2025,1.01.0.0
+
+[DestinationDirs]
+DefaultDestDir = 12
+VM_Checker_Device_CoInstaller_CopyFiles = 11
+
+; ================= Class section =====================
+
+[ClassInstall32]
+Addreg=SampleClassReg
+
+[SampleClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+VM_Checker.sys  = 1,,
+;
+
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64
+
+[Standard.NTamd64]
+%VM_Checker.DeviceDesc%=VM_Checker_Device, Root\VM_Checker ; TODO: edit hw-id
+
+[VM_Checker_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+VM_Checker.sys
+
+;-------------- Service installation
+[VM_Checker_Device.NT.Services]
+AddService = VM_Checker,%SPSVCINST_ASSOCSERVICE%, VM_Checker_Service_Inst
+
+; -------------- VM_Checker driver install sections
+[VM_Checker_Service_Inst]
+DisplayName    = %VM_Checker.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 0               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\VM_Checker.sys
+
+;
+;--- VM_Checker_Device Coinstaller installation ------
+;
+
+[VM_Checker_Device.NT.CoInstallers]
+AddReg=VM_Checker_Device_CoInstaller_AddReg
+CopyFiles=VM_Checker_Device_CoInstaller_CopyFiles
+
+[VM_Checker_Device_CoInstaller_AddReg]
+;
+
+HKLM,"SYSTEM\CurrentControlSet\Control\SafeBoot\Minimal\{4D36E96F-E329-11CE-BFC1-08002BE10318}",,0x00000000,"Lindows_VM_Checker"
+HKLM,"SYSTEM\CurrentControlSet\Control\SafeBoot\Network\{4D36E96F-E329-11CE-BFC1-08002BE10318}",,0x00000000,"Lindows_VM_Checker"
+HKLM,"SYSTEM\CurrentControlSet\Control\SafeBoot\Minimal\VM_Checker",,0x00000000,"Driver"
+HKLM,"SYSTEM\CurrentControlSet\Control\SafeBoot\Network\VM_Checker",,0x00000000,"Driver"
+
+[VM_Checker_Device_CoInstaller_CopyFiles]
+;
+
+
+[VM_Checker_Device.NT.Wdf]
+KmdfService =  VM_Checker, VM_Checker_wdfsect
+[VM_Checker_wdfsect]
+KmdfLibraryVersion = 1.15
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="Lindows" ;TODO: Replace with your manufacturer name
+ClassName="Lindows Virtual Machine Checker" ; TODO: edit ClassName
+DiskName = "Lindows Virtual Machine Checker Installation Disk"
+VM_Checker.DeviceDesc = "Lindows Virtual Machine Checker"
+VM_Checker.SVCDESC = "Lindows Virtual Machine Checker Service"
