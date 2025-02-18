@@ -18,4 +18,6 @@ Tip: Lindows 11.1 is not yet finished, this document only serves as a preview. F
 
 # Join us
 
-If you want to join the development of Lindows 11.1, please come over [here](https://github.com/Freedom-Windows-Team/Lindows_11.1/discussions/1) to communicate with us.
+If you want to join the development of Lindows 11.1, please contact me on discord. 
+
+My username: happy_mimimix
