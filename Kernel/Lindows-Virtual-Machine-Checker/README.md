@@ -7,7 +7,7 @@ If the current machine is not a virtual machine, it will immediately trigger a B
 
 However, that doesn't mean people cannot install Lindows 11.1 on a physical machine. It's actually extremely simple to hack this driver! 
 
-I will not try to stop anyone from hacking this driver or posting tutorials online about how to hack this driver. I don't want to stop those who actually need Lindows 11.1 from using it.
+I will not try to stop anyone from hacking this driver or posting tutorials online about how to hack this driver. I do not want to create headaches for people who actually need Lindows 11.1.
 
 For those who can't hack this driver, the odds are that they don't really need to use Lindows 11.1 at all, and for those who need Lindows 11.1 for real, they will be able to find a way to hack this virtual machine detection mechanism very quickly. 
 
