@@ -11,4 +11,7 @@ I will not try to stop anyone from hacking this driver or posting tutorials onli
 
 For those who can't hack this driver, the odds are that they don't really need to use Lindows 11.1 at all, and for those who need Lindows 11.1 for real, they will be able to find a way to hack this virtual machine detection mechanism very quickly. 
 
-If for some very rare odds you arrived at this page really wanted to have Lindows 11.1 on your hands so you can perform some tasks that was blocked by DSE, but also got stuck on hacking the virtual machine checker. You should go study more about how kernel mode drivers in windows works and why Microsoft implemented the Driver Signature Enforcement mechanism. You will know how to get around this virtual machine checker module by the time you have the ability required to take care of yourself and survive in Lindows 11.1. 
+If you can't hack this virtual machine checker module, then I'm really worried about what will happen if I let you use this modded OS on a physical machine. 
+Play around with this mod in a virtual machine then! I won't let anyone who is lacking the most basic Windows unbricking skills use Lindows 11.1 on a physical machine! 
+
+Cus what if a noob installed it and bricked their PC then says to me: "Shit OS! A lot less stable than orignal Windows 10. Fuck you Happy_mimimix!"
