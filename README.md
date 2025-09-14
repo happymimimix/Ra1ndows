@@ -1,6 +1,6 @@
 ![Icon_WithText](https://github.com/user-attachments/assets/e0fd54c8-7dd0-43d7-a579-8e2096b866cb)
 
-# Note: Ra1ndows has been renamed to Ra1ndows starting from 2025/09/14
+# Note: Lindows 11.1 has been renamed to Ra1ndows starting from 2025/09/14
 
 Tip: Ra1ndows is not yet finished, this document only serves as a preview. Features may be added or removed at any time during the development process, please refer to the final product.
 
