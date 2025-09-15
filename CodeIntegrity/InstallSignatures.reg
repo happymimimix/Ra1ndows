@@ -400,7 +400,7 @@ Windows Registry Editor Version 5.00
   88,7d,a0,46,6b,20,ab,55,6e,96,26,ce,ee,57,85,63,a0,97,b9,57,a6,4e,b5,03,2e,\
   36,87,eb,72,07,64,e4,2f,a0,a8,fe,ea,43,2d,73,e9,36,d5,8d,25
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\EnterpriseTrust\Certificates\F585BDD12EB2EF1D1C42FE3034F1173123AA1322]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\Trust\Certificates\F585BDD12EB2EF1D1C42FE3034F1173123AA1322]
 "Blob"=hex:03,00,00,00,01,00,00,00,14,00,00,00,f5,85,bd,d1,2e,b2,ef,1d,1c,42,\
   fe,30,34,f1,17,31,23,aa,13,22,02,00,00,00,01,00,00,00,cc,00,00,00,1c,00,00,\
   00,6c,00,00,00,01,00,00,00,20,00,00,00,00,00,00,00,00,00,00,00,01,00,00,00,\
@@ -911,7 +911,7 @@ Windows Registry Editor Version 5.00
   88,7d,a0,46,6b,20,ab,55,6e,96,26,ce,ee,57,85,63,a0,97,b9,57,a6,4e,b5,03,2e,\
   36,87,eb,72,07,64,e4,2f,a0,a8,fe,ea,43,2d,73,e9,36,d5,8d,25
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\EnterpriseTrust\Certificates\F585BDD12EB2EF1D1C42FE3034F1173123AA1322]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\Trust\Certificates\F585BDD12EB2EF1D1C42FE3034F1173123AA1322]
 "Blob"=hex:03,00,00,00,01,00,00,00,14,00,00,00,f5,85,bd,d1,2e,b2,ef,1d,1c,42,\
   fe,30,34,f1,17,31,23,aa,13,22,02,00,00,00,01,00,00,00,cc,00,00,00,1c,00,00,\
   00,6c,00,00,00,01,00,00,00,20,00,00,00,00,00,00,00,00,00,00,00,01,00,00,00,\
@@ -1422,7 +1422,7 @@ Windows Registry Editor Version 5.00
   88,7d,a0,46,6b,20,ab,55,6e,96,26,ce,ee,57,85,63,a0,97,b9,57,a6,4e,b5,03,2e,\
   36,87,eb,72,07,64,e4,2f,a0,a8,fe,ea,43,2d,73,e9,36,d5,8d,25
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EnterpriseCertificates\EnterpriseTrust\Certificates\F585BDD12EB2EF1D1C42FE3034F1173123AA1322]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EnterpriseCertificates\Trust\Certificates\F585BDD12EB2EF1D1C42FE3034F1173123AA1322]
 "Blob"=hex:03,00,00,00,01,00,00,00,14,00,00,00,f5,85,bd,d1,2e,b2,ef,1d,1c,42,\
   fe,30,34,f1,17,31,23,aa,13,22,02,00,00,00,01,00,00,00,cc,00,00,00,1c,00,00,\
   00,6c,00,00,00,01,00,00,00,20,00,00,00,00,00,00,00,00,00,00,00,01,00,00,00,\
@@ -1933,7 +1933,7 @@ Windows Registry Editor Version 5.00
   88,7d,a0,46,6b,20,ab,55,6e,96,26,ce,ee,57,85,63,a0,97,b9,57,a6,4e,b5,03,2e,\
   36,87,eb,72,07,64,e4,2f,a0,a8,fe,ea,43,2d,73,e9,36,d5,8d,25
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EnterpriseCertificates\EnterpriseTrust\Certificates\F585BDD12EB2EF1D1C42FE3034F1173123AA1322]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EnterpriseCertificates\Trust\Certificates\F585BDD12EB2EF1D1C42FE3034F1173123AA1322]
 "Blob"=hex:03,00,00,00,01,00,00,00,14,00,00,00,f5,85,bd,d1,2e,b2,ef,1d,1c,42,\
   fe,30,34,f1,17,31,23,aa,13,22,02,00,00,00,01,00,00,00,cc,00,00,00,1c,00,00,\
   00,6c,00,00,00,01,00,00,00,20,00,00,00,00,00,00,00,00,00,00,00,01,00,00,00,\
