@@ -1,10 +1,10 @@
+rem Stop hiding shit
+ATTRIB -S -H "C:\\*" /S /D /L
 rem Get around Microsoft's shit code in Explorer.exe
 DEL "C:\System Volume Information" /F /S /Q
 RMDIR "C:\System Volume Information" /S /Q
 MKDIR "C:\Windows\VolumeInfo"
 MKLINK "C:\System Volume Information" "C:\Windows\VolumeInfo" /J
-rem Stop hiding shit
-ATTRIB -S -H "C:\\*" /S /D /L
 rem NO MORE LOCALIZED NAMES
 DEL "C:\Program Files\desktop.ini" /F /Q
 DEL "C:\Program Files (x86)\desktop.ini" /F /Q
