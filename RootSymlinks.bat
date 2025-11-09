@@ -37,5 +37,5 @@ RMDIR "C:\Windows\SysWOW64\config\systemprofile" /S /Q
 MKLINK "C:\Windows\SysNative\config\systemprofile" "C:\Users\SYSTEM" /J
 MKLINK "C:\Windows\SysWOW64\config\systemprofile" "C:\Users\SYSTEM" /J
 rem Make the SYSTEM user actually usable
-XCOPY "C:\Users\Default\*" "C:\Users\SYSTEM\" /B /A /V /E /R /I /G /H /O /C /K /Y
+XCOPY "C:\Users\Default\*" "C:\Users\SYSTEM\" /B /E /V /R /I /G /H /O /C /K /Y
 pause
