@@ -13,6 +13,7 @@ DEL "C:\Users\desktop.ini" /F /Q
 rem This directory structure makes more sense
 RMDIR "C:\Bin" /S /Q
 MOVE /Y "C:\Program Files" "C:\Bin"
+RMDIR "C:\Bin\WOW6432Node" /S /Q
 MOVE /Y "C:\Program Files (x86)" "C:\Bin\WOW6432Node"
 MKDIR "C:\Users\Public\AppData"
 RMDIR "C:\Users\Public\AppData\Roaming" /S /Q
