@@ -96,12 +96,12 @@ Return Value:
     }
 
     if (IsVirtualMachine()) {
-        TraceEvents(TRACE_LEVEL_WARNING, TRACE_DRIVER, "Welcome to Lindows 11.1 Pro! Enjoy your freedom. ");
-        DbgPrint("Welcome to Lindows 11.1 Pro! Enjoy your freedom. \n");
+        TraceEvents(TRACE_LEVEL_WARNING, TRACE_DRIVER, "Welcome to Ra1ndows! Enjoy your freedom. ");
+        DbgPrint("Welcome to Ra1ndows! Enjoy your freedom. \n");
     }
     else {
-        TraceEvents(TRACE_LEVEL_WARNING, TRACE_DRIVER, "Sorry, you are only allowed to run Lindows 11.1 Pro in a virtual machine. ");
-        DbgPrint("Sorry, you are only allowed to run Lindows 11.1 Pro in a virtual machine. \n");
+        TraceEvents(TRACE_LEVEL_WARNING, TRACE_DRIVER, "Sorry, you are only allowed to run Ra1ndows in a virtual machine. ");
+        DbgPrint("Sorry, you are only allowed to run Ra1ndows in a virtual machine. \n");
         KeBugCheckEx(0xDEADDEAD, 0, 0, 0, 0);
     }
 
