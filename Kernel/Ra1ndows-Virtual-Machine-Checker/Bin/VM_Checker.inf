@@ -5,7 +5,7 @@
 [Version]
 Signature="$WINDOWS NT$"
 Class=Ra1ndows_VM_Checker
-ClassGuid={4D36E96F-E329-11CE-BFC1-08002BE10318}
+ClassGuid={4D36E963-E325-11CE-BFC1-08002BE10318}
 Provider=%ManufacturerName%
 CatalogFile=VM_Checker.cat
 DriverVer = 12/21/2025,1.01.0.0
@@ -68,8 +68,8 @@ CopyFiles=VM_Checker_Device_CoInstaller_CopyFiles
 
 [VM_Checker_Device_CoInstaller_AddReg]
 HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
-HKLM,"SYSTEM\CurrentControlSet\Control\SafeBoot\Minimal\{4D36E96F-E329-11CE-BFC1-08002BE10318}",,0x00000000,"Ra1ndows_VM_Checker"
-HKLM,"SYSTEM\CurrentControlSet\Control\SafeBoot\Network\{4D36E96F-E329-11CE-BFC1-08002BE10318}",,0x00000000,"Ra1ndows_VM_Checker"
+HKLM,"SYSTEM\CurrentControlSet\Control\SafeBoot\Minimal\{4D36E963-E325-11CE-BFC1-08002BE10318}",,0x00000000,"Ra1ndows_VM_Checker"
+HKLM,"SYSTEM\CurrentControlSet\Control\SafeBoot\Network\{4D36E963-E325-11CE-BFC1-08002BE10318}",,0x00000000,"Ra1ndows_VM_Checker"
 HKLM,"SYSTEM\CurrentControlSet\Control\SafeBoot\Minimal\VM_Checker",,0x00000000,"Driver"
 HKLM,"SYSTEM\CurrentControlSet\Control\SafeBoot\Network\VM_Checker",,0x00000000,"Driver"
 
