@@ -4,6 +4,8 @@ Windows Registry Editor Version 5.00
 
 [-HKEY_CLASSES_ROOT\WOW6432Node\CLSID\{D69E0717-DD4B-4B25-997A-DA813833B8AC}]
 
+[-HKEY_CLASSES_ROOT\AudioEngine\AudioProcessingObjects\{D69E0717-DD4B-4B25-997A-DA813833B8AC}]
+
 [HKEY_CLASSES_ROOT\AudioEngine\AudioProcessingObjects\{D69E0717-DD4B-4B25-997A-DA813833B8AC}]
 "Flags"=dword:0
 "MaxInputConnections"=dword:1
